@@ -1,5 +1,5 @@
 var FONT = 75;
-var ROWS = 20;
+var ROWS = 10;
 var COLS = 20;
 var ACTORS = 20;
 var map;
@@ -12,8 +12,14 @@ var game = new Phaser.Game(COLS * FONT * 0.6, ROWS * FONT, Phaser.AUTO, null, {
     create: create
 });
 
+
 function create() {
-    game.input.keyboard.addCallbacks(null, null, onKeyUp);
+
+    //keyboard callback for turn management not required
+    //game.input.keyboard.addCallbacks(null, null, onKeyUp);
+    //New time control:
+    turnControl();
+
     initMap();
     asciidisplay = [];
     for (var y = 0; y < ROWS; y++) {
@@ -26,6 +32,15 @@ function create() {
     drawMap();
     drawActors();
 }
+
+
+function turnControl(){
+
+    if (turnEnd) {
+        // update the board state
+    }
+}
+
 
 function initCell(chr, x, y){
     var style = {
@@ -86,36 +101,48 @@ function drawActors() {
     }
 }
 
-function onKeyUp(event) {
-	drawMap();
-	var acted = false;
-	switch (event.keyCode) {
-		case Phaser.Keyboard.LEFT:
-			acted = moveTo(player, {x:-1, y:0});
-			break;
 
-		case Phaser.Keyboard.RIGHT:
-			acted = moveTo(player,{x:1, y:0});
-			break;
+
+
+
+
+
+
+
+
+
+// This was rudimentary code for turns being based on single key events
+
+// function onKeyUp(event) {
+// 	drawMap();
+// 	var acted = false;
+// 	switch (event.keyCode) {
+// 		case Phaser.Keyboard.LEFT:
+// 			acted = moveTo(player, {x:-1, y:0});
+// 			break;
+
+// 		case Phaser.Keyboard.RIGHT:
+// 			acted = moveTo(player,{x:1, y:0});
+// 			break;
 			
-		case Phaser.Keyboard.UP:
-			acted = moveTo(player, {x:0, y:-1});
-			break;
+// 		case Phaser.Keyboard.UP:
+// 			acted = moveTo(player, {x:0, y:-1});
+// 			break;
 
-		case Phaser.Keyboard.DOWN:
-			acted = moveTo(player, {x:0, y:1});
-			break;
-	}
-	if (acted)
-		for (var enemy in actorList) {
-			if(enemy==0)
-				continue;
-			var e = actorList[enemy];
-			if (e != null)
-				aiAct(e);
-	}
-	drawActors();
-}
+// 		case Phaser.Keyboard.DOWN:
+// 			acted = moveTo(player, {x:0, y:1});
+// 			break;
+// 	}
+// 	if (acted)
+// 		for (var enemy in actorList) {
+// 			if(enemy==0)
+// 				continue;
+// 			var e = actorList[enemy];
+// 			if (e != null)
+// 				aiAct(e);
+// 	}
+// 	drawActors();
+// }
 
 function canGo(actor, dir) {
 	return 	actor.x+dir.x >= 0 &&
