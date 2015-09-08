@@ -1,5 +1,5 @@
 var FONT = 75;
-var ROWS = 10;
+var ROWS = 20;
 var COLS = 20;
 var ACTORS = 20;
 var map;
