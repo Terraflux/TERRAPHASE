@@ -15,7 +15,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzFVEEOwCAIwxP\/\/\/GuBFvozGQkXBDbCo1uZj6QCyQLJ3WEsQKH2c6Za4iDnSPcSp\/6DtbHOJC+Di\/P3W2f1a3oZpn3Vu0O9SEOFJXPOg9WHNnbCkaHhfRVmCjYnT85JmYVtSn\/i6IBaYo8nXeZx5V3fBE3\/pJYqzg6vDd9bMaKPvXOyT5O+ifyAcxhBQI=",
+         "data":"eJzFVEEOwDAIsif\/\/+NdjQVlzepMvDgHqKRuZj6QCyQLJ3WEsQKH2c6Za4iDfUe4SB+bhc3B+hgH0tfh5b277bu6Fd0u892q26E+xIGi8lnnwYoje1vB6LCQvgoTReXDvzgmdhW1Ke+LogFpijydd5nHlTm+iBtvSaxVHB3emz62Y0Wf+s\/JPU76J\/IB0u0FAw==",
          "encoding":"base64",
          "height":20,
          "name":"Walls",
@@ -37,7 +37,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "image":"..\/..\/..\/Users\/Terrafluxuru\/Downloads\/tileset\/tileset\/grass-tiles-2-small.png",
+         "image":"..\/..\/..\/..\/Users\/Terrafluxuru\/Downloads\/tileset\/tileset\/grass-tiles-2-small.png",
          "imageheight":192,
          "imagewidth":384,
          "margin":0,

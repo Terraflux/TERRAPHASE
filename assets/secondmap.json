@@ -2,7 +2,7 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJxjZGBgYBzFo3gUj+JRPIpH8ZDGAK1BAfU=",
+         "data":"eJx7xMTA8GgUj+JRPIpH8SgexUMaAwBlKb1g",
          "encoding":"base64",
          "height":20,
          "name":"Ground",
@@ -15,10 +15,10 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzFVEEOwDAIsif\/\/+NdjQVlzepMvDgHqKRuZj6QCyQLJ3WEsQKH2c6Za4iDfUe4SB+bhc3B+hgH0tfh5b277bu6Fd0u892q26E+xIGi8lnnwYoje1vB6LCQvgoTReXDvzgmdhW1Ke+LogFpijydd5nHlTm+iBtvSaxVHB3emz62Y0Wf+s\/JPU76J\/IB0u0FAw==",
+         "data":"eJzdlVEKwCAMQ9f7H696kur\/KCgWyaBO6WABf7a6anjprmtNQosbXqgG9EibPdQHXbkt9D0Gz7RW78dm75\/FNLyyEuNDf5eNJ7N3qdUjv057iPjz8uKtKxtnjmAGseuVN79er9B9d\/M7C51ZaHA315aJR2nMJjALetYj5tqXKia7TJjxp2x1\/yqYFauK+Eed5u9Ujxs+sTw6",
          "encoding":"base64",
          "height":20,
-         "name":"Walls",
+         "name":"Foreground",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -37,19 +37,20 @@
  "tilesets":[
         {
          "firstgid":1,
-         "image":"..\/..\/..\/Users\/Terrafluxuru\/Downloads\/tileset\/tileset\/grass-tiles-2-small.png",
-         "imageheight":192,
-         "imagewidth":384,
+         "image":"terrain.png",
+         "imageheight":1024,
+         "imagewidth":1024,
          "margin":0,
-         "name":"grass-tiles-2-small",
+         "name":"tiles",
          "properties":
             {
 
             },
          "spacing":0,
-         "tilecount":72,
+         "tilecount":1024,
          "tileheight":32,
-         "tilewidth":32
+         "tilewidth":32,
+         "transparentcolor":"#ffffff"
         }],
  "tilewidth":30,
  "version":1,
