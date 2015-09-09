@@ -126,30 +126,30 @@ function canGo(actor, dir) {
 }
 
 function moveTo(actor, dir) {
-        if (!canGo(actor,dir))
-                return false;
-        var newKey = (actor.y + dir.y) + '_' + (actor.x + dir.x);
-        if (actorMap[newKey] != null) {
-                var victim = actorMap[newKey];
-                victim.hp--;
-                if (victim.hp == 0) {
-                        actorMap[newKey]= null;
-                        actorList[actorList.indexOf(victim)]=null;
-                        if(victim!=player) {
-                                livingEnemies--;
-                                if (livingEnemies == 0) {
-                                        var victory = game.add.text(game.world.centerX, game.world.centerY, 'Victory!\nCtrl+r to restart', { fill : '#2e2', align: "center" } );
-                                        victory.anchor.setTo(0.5,0.5);
-                                }
-                        }
-                }
-        } else {
-                actorMap[actor.y + '_' + actor.x]= null;
-                actor.y+=dir.y;
-                actor.x+=dir.x;
-                actorMap[actor.y + '_' + actor.x]=actor;
-        }
-        return true;
+    if (!canGo(actor,dir))
+            return false;
+    var newKey = (actor.y + dir.y) + '_' + (actor.x + dir.x);
+    if (actorMap[newKey] != null) {
+            var victim = actorMap[newKey];
+            victim.hp--;
+            if (victim.hp == 0) {
+                    actorMap[newKey]= null;
+                    actorList[actorList.indexOf(victim)]=null;
+                    if(victim!=player) {
+                            livingEnemies--;
+                            if (livingEnemies == 0) {
+                                    var victory = game.add.text(game.world.centerX, game.world.centerY, 'Victory!\nCtrl+r to restart', { fill : '#2e2', align: "center" } );
+                                    victory.anchor.setTo(0.5,0.5);
+                            }
+                    }
+            }
+    } else {
+            actorMap[actor.y + '_' + actor.x]= null;
+            actor.y+=dir.y;
+            actor.x+=dir.x;
+            actorMap[actor.y + '_' + actor.x]=actor;
+    }
+    return true;
 }
 
 function aiAct(actor) {
